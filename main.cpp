@@ -9,6 +9,8 @@ int main() {
     // Получаем данные для файла
     std::cout << "Enter data: " << std::endl;
     std::cin >> data;
+    std::cin.clear();
+    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 
     // Создаем файл
     HANDLE fileHandle = CreateFile(
